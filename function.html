@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+    <form name="tocheck">
+        <h1>Grade</h1>
+        <input type="text" name="val">
+
+        <br>
+        <br>
+        <input type="button" value="Check" onclick="Grade()">
+    </form>
+
+    <p id="res"></p>
+</center>
+    <script>
+        
+        function Grade(){
+            var grade= tocheck.val.value;
+
+            if(grade>100){
+               document.getElementById("res").innerHTML= "Not possible";
+            }
+            else if(grade>=90){
+                document.getElementById("res").innerHTML= "A+";
+            }
+
+            else if(grade>=80){
+                document.getElementById("res").innerHTML= "A";
+            }
+
+            else if(grade>=70){
+                document.getElementById("res").innerHTML= "B+";
+            }
+
+            else if(grade>=60){
+                document.getElementById("res").innerHTML= "B";
+            }
+
+
+            
+            else if(grade>=50){
+                document.getElementById("res").innerHTML= "C";
+            }
+
+            
+            else if(grade>=40){
+                document.getElementById("res").innerHTML= "pass";
+            }
+
+            else{
+                document.getElementById("res").innerHTML= "fail";
+            }
+
+
+        }
+    </script>
+</body>
+</html>

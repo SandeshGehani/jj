@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>Switch case</h1>
+            <input type="text" id="a" ><br><br>
+            <input type="text" id="b" ><br><br>
+        
+            <select id="c" onchange="check()">
+                <option value="">*****choose option*****</option>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            </select>
+        </form>
+        
+        <p id="res"></p>
+<script>
+    function check(){
+        var val1 = parseInt(document.getElementById("a").value);
+        var val2 = parseInt(document.getElementById("b").value);
+        var cal = document.getElementById("c").value;
+        
+       switch(cal){
+           case '+':
+               document.getElementById("res").innerHTML=val1+val2;
+               break;
+            
+            
+            case "-":
+                document.getElementById("res").innerHTML=val1-val2;
+                break;
+            
+            
+            
+            case '*':
+                document.getElementById("res").innerHTML=val1*val2;
+                break;
+            
+
+            case '/':
+                document.getElementById("res").innerHTML=val1/val2;
+                 break;
+    
+    
+    default:
+        document.getElementById("res").innerHTML="not_valid";
+        break;
+    
+    
+}
+    }
+
+</script>
+</body>
+</html>
